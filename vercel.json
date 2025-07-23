@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/api/properties/test.js" },
+    { "source": "/properties", "destination": "/api/properties/index.js" },
+    { "source": "/properties/add", "destination": "/api/properties/add.js" },
+    { "source": "/properties/test", "destination": "/api/properties/test.js" },
+    { "source": "/properties/:id", "destination": "/api/properties/[id].js" }
+  ]
+}
